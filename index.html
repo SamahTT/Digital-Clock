@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Clock | JS</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="clock"></div>
+
+    <script type="text/javascript">
+      function updateTime() {
+        const time = new Date();
+        const hour = time.getHours();
+        const minute = time.getMinutes();
+        const stringTime = hour + ":" + minute;
+        document.getElementById("clock").textContent = stringTime;
+      }
+      setInterval(updateTime, 1000);
+    </script>
+  </body>
+</html>
